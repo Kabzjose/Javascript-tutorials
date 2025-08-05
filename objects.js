@@ -57,7 +57,7 @@ for (let subject in subjects) {
 
 console.log(highest);//{ subject: 'computer', score: 89 }
 
-// Grading subjects
+// Grading subjects and displaying score and grade
 let scores = {
   math: 77,
   english: 58,
@@ -66,19 +66,29 @@ let scores = {
   computer: 89,
 };
 
+let gradedScores = {};
 
 for (let subject in scores) {
-  if (scores[subject]<=100 && scores[subject]>=80  ) {
-    scores[subject]="A"
-  } else if(scores[subject]<=79 && scores[subject]>=70){
-      scores[subject]="B"
-  }else if(scores[subject]<=69 && scores[subject]>=60){
-      scores[subject]="C"
-  }else if(scores[subject]>=50 && scores[subject]<=59){
-      scores[subject]="D"
-  }else{
-      scores[subject]="F"
+  let score = scores[subject];
+  let grade = "";
+
+  if (score >= 80 && score <= 100) {
+    grade = "A";
+  } else if (score >= 70 && score <= 79) {
+    grade = "B";
+  } else if (score >= 60 && score <= 69) {
+    grade = "C";
+  } else if (score >= 50 && score <= 59) {
+    grade = "D";
+  } else {
+    grade = "F";
   }
+
+  // Store both score and grade
+  gradedScores[subject] = {
+    score: score,
+    grade: grade
+  };
 }
 
-console.log(scores);
+console.log(gradedScores);
