@@ -29,3 +29,10 @@ console.log(num(45, 50, 99)); // Output: 99
  let word="Hello"
  let reverse= word.split("").reverse().join("");
  console.log( reverse)
+
+ //capitalizing all first letters in a sentence
+ let words=(word)=>{
+    let capitalize=word.split(" ").map(n => n.charAt(0).toUpperCase()+ n.slice(1)).join(" ");
+    console.log(capitalize)
+}
+words("jose kabz is a software engineer") //Jose Kabz Is A Software Engineer
