@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+   <p>Buttons to increase or decrease a number</p>
+   <p id="num"></p>
+   <button id="increase">Add</button>
+     <button id="decrease">Subtract</button>
+      <script >
+        let increase = document.getElementById("increase");
+let decrease = document.getElementById("decrease");
+let num = document.getElementById("num");
+
+increase.addEventListener("click", () => {
+  num.innerText = Number(num.innerText) + 1;
+});
+
+decrease.addEventListener("click", () => {
+  if (Number(num.innerText) >= 1) {
+    num.innerText = Number(num.innerText) - 1;
+  }
+});
+
+      </script>
+  </body>
+</html>
