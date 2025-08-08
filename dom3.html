@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+  
+    <p id="text">Create an element with some text. </p>
+    
+
+  
+     <button id ="hide">Hide</button>
+      <script >
+        let button=document.getElementById("hide")
+let text=document.getElementById("text")
+button.addEventListener("click",()=>{
+  if(text.style.display==="none"){
+    text.style.display="block"
+    button.innerText="Hide"
+  }else{
+    text.style.display="none"
+    button.innerText="Show"
+  }
+});
+ 
+      </script>
+  </body>
+</html>
