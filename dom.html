@@ -1,0 +1,30 @@
+
+ 
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+   
+      <p>Programming languages</p>
+      <ul class=list>
+        <li class="listItem">Javasceipt</li>
+         <li class="listItem">Python</li> 
+         <li class="listItem">Java</li>
+         <li class="listItem">C++</li>
+      </ul>
+      <button id="button">CLICK ME TO CHANGE THE COLOR</button>
+      <script >
+        // code to change the color of the list items
+        let list= document.querySelectorAll("li")
+let button=document.getElementById("button")
+ button.addEventListener("click",()=>{
+  list.forEach(li =>{
+  li.style.color="red"
+  })
+  });
+      </script>
+  </body>
+</html>
