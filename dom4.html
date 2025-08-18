@@ -14,12 +14,15 @@
         <li>C#</li>
         <li>PHP</li>
     </ul>
+    <button id="button">Remove item</button>
     <script>
         // Removing pHp on the list
-        
+          let button=document.getElementById("button")
           let ul=document.getElementById("list")
           let lastItem=ul.children[3]
-          lastItem.remove()
+          button.addEventListener("click",()=>{
+            lastItem.remove()
+          })
     </script>
 </body>
 </html>
