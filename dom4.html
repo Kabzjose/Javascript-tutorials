@@ -15,11 +15,11 @@
         <li>PHP</li>
     </ul>
     <script>
-        // Adding java to the list
+        // Adding java on the top of the list
         let li =document.createElement("li")
           li.innerText="Java"
           let ul=document.getElementById("list")
-          ul.appendChild(li)
+          ul.prepend(li)
     </script>
 </body>
 </html>
