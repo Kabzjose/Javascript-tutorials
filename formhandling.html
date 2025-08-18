@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="loginForm">
+        <label for="username">Username</label>
+  <input id="username" type="text" placeholder="Enter username" />
+  <label for="password">password</label>
+  <input id="password" type="password" placeholder="Enter password" />
+  <button>Login</button>
+
+<p id="msg"></p>
+
+    </form>
+    <script>
+        let form=document.getElementById("loginForm")
+        let username=document.getElementById("username")
+        let password=document.getElementById("password")
+        let msg=document.getElementById("msg")
+
+        form.addEventListener("submit",(e)=>{
+         e.preventDefault()
+         let name=username.value.trim()
+         let pass=password.value.trim()
+         if(name===""|| pass===""){
+            msg.innerText="All fields are required"
+            msg.style.color="red"
+         }else{
+            msg.innerText="Login Succesful"
+            msg.style.color="green"
+         }
+        })
+    </script>
+</body>
+</html>
