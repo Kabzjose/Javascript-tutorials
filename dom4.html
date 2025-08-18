@@ -15,11 +15,11 @@
         <li>PHP</li>
     </ul>
     <script>
-        // Adding java on the top of the list
-        let li =document.createElement("li")
-          li.innerText="Java"
+        // Removing pHp on the list
+        
           let ul=document.getElementById("list")
-          ul.prepend(li)
+          let lastItem=ul.children[3]
+          lastItem.remove()
     </script>
 </body>
 </html>
