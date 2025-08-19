@@ -29,3 +29,13 @@ console.log(longest);
 let number =[ 2,3,4,5,6,7]
 let square= number.map(num=> num*num)
 console.log(square)
+
+//  code to change color of a p element when the mouse enters an elemenet
+let event=document.getElementById("time")
+event.addEventListener("mouseover",()=>{
+  event.style.color="red"
+})
+// code to reset the original color once the mouse moves out of an element
+event.addEventListener("mouseout", () => {
+  event.style.color = "";  // reset
+});
