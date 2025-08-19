@@ -39,3 +39,11 @@ event.addEventListener("mouseover",()=>{
 event.addEventListener("mouseout", () => {
   event.style.color = "";  // reset
 });
+
+//code to detect if a user has pressed enterkey
+let input=document.getElementById("input")
+input.addEventListener("keydown",(e)=>{
+  if(e.key === "Enter"){
+    console.log("Yous pressed Enter key")
+  }
+})
