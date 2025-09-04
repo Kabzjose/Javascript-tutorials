@@ -84,7 +84,7 @@ for (let subject in scores) {
     grade = "F";
   }
 
-  // Store both score and grade
+  
   gradedScores[subject] = {
     score: score,
     grade: grade
@@ -92,3 +92,44 @@ for (let subject in scores) {
 }
 
 console.log(gradedScores);
+
+// array destructuring
+ const fruits=["apple","bananas","orange"]
+ const [firstFruit,secondFruit]=fruits
+ console.log(firstFruit)//apple
+ console.log(secondFruit)//bananas
+ //spread operator array
+ const moreFruits={...fruits,"mangos","lemon"}
+console.log(moreFruits)[ 'apple', 'bananas', 'orange', 'mangos', 'lemon' ]
+
+
+ //object destructuring
+ const person={
+    name:"Jose",
+    age:23,
+    
+};
+// renaming while destructuring
+const {city:"Nairobi"}=person
+const { name,age} =person
+
+console.log(name)//Jose
+console.log(age)//23
+
+//spread operator object
+const details={...person,gender:"male",}
+ console.log(details)//{ name: 'Jose', age: 23, city: 'Nairobi', gender: 'male' }
+
+ // rest operator-collecting remaining items
+ const numbers=[1,2,3,4,5]
+ const [first,second,...others]=numbers
+ console.log(first)//1
+ console.log(second)//2
+ console.log(others)//3,4,5
+ //rest operator-Collect Function Arguments
+ const sum=(...numbers)=>{
+    let total=0
+    numbers.forEach(number => total += number)
+    return total;
+}
+console.log(sum(1,2,3,10,34,45))//95
