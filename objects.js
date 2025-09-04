@@ -110,7 +110,7 @@ console.log(moreFruits)[ 'apple', 'bananas', 'orange', 'mangos', 'lemon' ]
     
 };
 // renaming while destructuring
-const {city:"Nairobi"}=person
+const {city: "Nairobi" }=person
 const { name,age} =person
 
 console.log(name)//Jose
@@ -133,3 +133,10 @@ const details={...person,gender:"male",}
     return total;
 }
 console.log(sum(1,2,3,10,34,45))//95
+
+//multiplying numbers using rest operator
+const product=(...numbers)=>{
+  return numbers.reduce((acc,num)=> acc*num,1)
+      
+}
+console.log(product(2,3,6,7))
