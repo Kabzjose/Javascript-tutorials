@@ -8,4 +8,15 @@ const student={
     }
    
 }
- console.log(student.getAverage())
+ console.log(student.getAverage())//40.3333
+
+
+  // this in objects
+  const person={
+    name:"Peter",
+    age:23,
+    greet: function(){
+        console.log("Hey my Name is"+ this.name+ "and im "+this.age+"years old")
+    }
+  }
+  person.greet()//Hey my Name is Peter and im 23  years old
