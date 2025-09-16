@@ -1,3 +1,10 @@
-setInterval(()=>{
-    console.log("hello world")//after every 3 seconds hello world will be displayed continuously
-},3000)
+
+let count =0
+let timer=setInterval(()=>{
+    console.log("Count: " +count)
+    count ++
+   if(count>6){
+    clearInterval(timer)
+    console.log("stopped")
+   }
+},2000)
