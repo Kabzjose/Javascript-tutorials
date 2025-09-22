@@ -14,14 +14,18 @@ async function cook() {
 console.log("washing dishes")// runs first because its outside the asyn function
 cook()
 */
-async function name() {
+async function getjoke() {
     try{
-        let res=await fetch("https://wrong-url.com/data")
-        let data=await res.json
-        console.log(data)
+        console.log("Fetching a joke... ");
+        let response=await fetch("https://official-joke-api.appspot.com/random_joke")
+        let data=await response.json()
+         console.log("Data received:", data);  // check what you actually got
+        console.log("Setup:",data.setup  || "No setup")
+        console.log("Punchline:",data.punchline || "No punchline")
     }catch (error){
-   console.log("Error finding data:",error.message)
+   console.log("Error finding data:",error)//Error finding data: fetch failed
+
     }
     
 }
-name()
+getjoke()
