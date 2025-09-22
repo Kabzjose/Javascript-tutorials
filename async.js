@@ -1,4 +1,4 @@
-/*let boilRice=new Promise((resolve,reject)=>{
+let boilRice=new Promise((resolve,reject)=>{
     setTimeout(()=>{
         resolve("Rice is ready")
     },3000)
@@ -13,7 +13,7 @@ async function cook() {
 }
 console.log("washing dishes")// runs first because its outside the asyn function
 cook()
-*/
+
 async function getjoke() {
     try{
         console.log("Fetching a joke... ");
