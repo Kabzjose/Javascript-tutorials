@@ -5,10 +5,12 @@ fetch("https://jsonplaceholder.typicode.com/posts/1")
 
   fetch("https://official-joke-api.appspot.com/random_joke")
    .then(response => response.json()) 
-  .then(data=>{
+  .then(data=>{setTimeout(()=>{
     console.log("Setup:", data.setup )
     console.log("Punchline:", data.punchline)
+  },2000)
+    
   })
-  .catch(error=> console.log("Error:",error))// Setup: Why don’t programmers like nature? Punchline: It has too many bugs.
+  .catch(error=> console.log("Something went wrong:",error))// Setup: Why don’t programmers like nature? Punchline: It has too many bugs.
 
 
