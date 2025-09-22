@@ -1,4 +1,4 @@
-/*let boilRice=new Promise((resolve,reject)=>{
+let boilRice=new Promise((resolve,reject)=>{
     setTimeout(()=>{
         resolve("Rice is ready")
     },3000)
@@ -13,10 +13,12 @@ async function cook() {
 }
 console.log("washing dishes")// runs first because its outside the asyn function
 cook()
-*/
-async function getjoke() {
+
+async function getjokes() {
+    for(let i=1;i<=3;i++){
+
     try{
-        console.log("Fetching a joke... ");
+        console.log(`Fetching joke #${i}... `);
         let response=await fetch("https://official-joke-api.appspot.com/random_joke")
         let data=await response.json()
         console.log("Setup:",data.setup  || "No setup")
@@ -26,6 +28,6 @@ async function getjoke() {
    console.log("Error finding data:",error)//Error finding data: fetch failed
 
     }
-    
-}
-getjoke()
+    console.log("All done")
+}}
+getjokes()
