@@ -47,3 +47,26 @@ input.addEventListener("keydown",(e)=>{
     console.log("Yous pressed Enter key")
   }
 })
+//Array.sort() method
+const fruits=["banana","apple", "orange"]
+fruits.sort()
+  console.log(fruits)//// Output: ["apple", "banana", "orange"]
+
+  //sorting numbers ascending order
+  const num=[10,2,5]
+  num.sort((a,b)=>a-b)//If the result is negative, a comes before b,If the result is positive, a comes after b,If it’s 0, their order stays the same
+  console.log(num)// Output: [2, 5, 10] 
+//descending order
+numbers.sort((a, b) => b - a);
+console.log(numbers);// Output: [10, 5, 2]
+
+//sorting students by score
+const students = [
+  { name: "Alice", score: 85 },
+  { name: "Bob", score: 92 },
+  { name: "Charlie", score: 78 }
+];
+
+students.sort((a, b) => b.score - a.score);
+console.log(students);
+
